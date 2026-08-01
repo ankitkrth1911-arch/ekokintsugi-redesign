@@ -112,7 +112,7 @@ export default function HeroSlider() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight tracking-tight"
+               className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white hero-text-fixed mb-6 leading-tight tracking-tight"
               >
                 {slides[index].title.split(' ')[0]}<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-glow-orange to-glow-pink">
