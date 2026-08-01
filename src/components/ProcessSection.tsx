@@ -114,13 +114,16 @@ export default function ProcessSection() {
             className="relative"
           >
             <div className="rounded-[2rem] overflow-hidden shadow-2xl aspect-video relative z-10 border border-white/10">
-              <img 
-                src="/images/sections/ai-tech.jpg" 
-                alt="AI Technology"
-                className="w-full h-full object-cover mix-blend-luminosity opacity-70"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-glow-orange/20 to-transparent mix-blend-overlay" />
-            </div>
+  <iframe
+    src="https://www.youtube.com/embed/nPk_ropk23U"
+    title="AI Technology"
+    className="w-full h-full"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+  ></iframe>
+  <div className="absolute inset-0 bg-gradient-to-tr from-glow-orange/20 to-transparent mix-blend-overlay pointer-events-none" />
+</div>
             <div className="absolute -inset-4 border border-glow-orange/20 rounded-[2.5rem] -z-10" />
           </motion.div>
           <motion.div 
