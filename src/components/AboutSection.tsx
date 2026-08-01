@@ -91,12 +91,15 @@ export default function AboutSection() {
             className="relative"
           >
             <div className="rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/5] border border-white/10 relative z-10">
-              <img 
-                src="/images/sections/about-workshop.jpg" 
-                alt="EkoKintsugi Workshop"
-                className="w-full h-full object-cover mix-blend-luminosity opacity-80"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent" />
+              <video
+  src="/about-workshop.mp4"
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full h-full object-cover dark:mix-blend-luminosity dark:opacity-80"
+/>
+<div className="absolute inset-0 dark:bg-gradient-to-t dark:from-[#0a0a0f] dark:via-transparent dark:to-transparent" />
             </div>
             
             {/* Ambient glows behind the image */}
