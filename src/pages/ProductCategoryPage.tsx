@@ -85,7 +85,7 @@ export default function ProductCategoryPage() {
                 className="w-full h-full object-cover mix-blend-luminosity opacity-70"
                 style={{ objectPosition: category.imagePosition ?? "center" }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#0a0a0f]/90 via-[#0a0a0f]/40 to-transparent" />
+            <div className="absolute inset-0 dark:bg-gradient-to-t lg:dark:bg-gradient-to-r dark:from-[#0a0a0f]/90 dark:via-[#0a0a0f]/40 dark:to-transparent" />
             </div>
 
             <div className="p-8 sm:p-12 lg:p-16 flex flex-col justify-center bg-white/5">
