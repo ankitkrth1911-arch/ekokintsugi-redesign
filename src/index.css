@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-heading: "Inter", system-ui, sans-serif;
+
+  /* SaaS AI Design System Palette */
+  --color-background: #0a0a0f;
+  --color-foreground: #f3f4f6;
+  --color-card: rgba(255, 255, 255, 0.03);
+  --color-card-border: rgba(255, 255, 255, 0.1);
+  --color-primary: #ff7b00; /* Warm glow orange */
+  --color-primary-foreground: #ffffff;
+  --color-muted: rgba(255, 255, 255, 0.1);
+  --color-muted-foreground: rgba(255, 255, 255, 0.6);
+  --color-border: rgba(255, 255, 255, 0.1);
+  
+  /* Warm Glowing Accents */
+  --color-glow-orange: #ff7b00;
+  --color-glow-red: #ff2a00;
+  --color-glow-pink: #ff007b;
+  --color-glow-amber: #ffb703;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Force dark mode behavior globally since we want a pure dark SaaS site */
+    color-scheme: dark; 
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    /* Soft global background noise or gradient can go here, but background color works */
+  }
+}
+
+/* Glassmorphism Utilities */
+@utility glass-card {
+  @apply bg-card border border-white/10 backdrop-blur-md rounded-2xl shadow-xl transition-all duration-300;
+}
+
+@utility glass-panel {
+  @apply bg-black/40 border border-white/10 backdrop-blur-xl rounded-[2rem];
+}
+
+@utility text-gradient {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-glow-orange to-glow-pink;
+}
+
+@utility bg-gradient-glow {
+  @apply bg-gradient-to-r from-glow-orange to-glow-pink;
+}
+
+/* Base override for existing components to prevent white flash */
+#root {
+  @apply bg-background min-h-screen;
+}
+
+/* Global focus styles */
+:focus-visible {
+  @apply outline-none ring-2 ring-glow-orange/50 ring-offset-2 ring-offset-background;
+}

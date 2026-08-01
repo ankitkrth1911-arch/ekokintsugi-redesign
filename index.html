@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EkoKintsugi — Premium Circular Leather & Carbon-Positive Reforestation</title>
+    <meta name="description" content="EkoKintsugi transforms premium leather offcuts and sustainable materials into handcrafted luxury goods. Every piece is traceable via digital product passports and registers real-world reforestation saplings." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ekokintsugi.com/" />
+    <meta property="og:title" content="EkoKintsugi — Premium Circular Leather & Carbon-Positive Reforeforestation" />
+    <meta property="og:description" content="EkoKintsugi transforms premium leather offcuts into handcrafted luxury goods, traceably planting a tree for every single piece." />
+    <meta property="og:image" content="/logo_eko.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ekokintsugi.com/" />
+    <meta property="twitter:title" content="EkoKintsugi — Premium Circular Leather & Reforestation" />
+    <meta property="twitter:description" content="EkoKintsugi transforms premium leather offcuts into handcrafted luxury goods, traceably planting a tree for every single piece." />
+    <meta property="twitter:image" content="/logo_eko.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logo_eko.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+ <!-- Eko Chatbot Widget -->
+<button id="eko-chat-toggle" style="position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:#C89B4C;border:none;box-shadow:0 8px 20px rgba(0,0,0,0.3);cursor:pointer;z-index:9999;font-size:26px;">💬</button>
+<iframe id="eko-chat-frame" src="/eko-chatbot.html" style="display:none;position:fixed;bottom:90px;right:20px;width:380px;height:600px;max-height:80vh;border:none;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.4);z-index:9999;"></iframe>
+<script>
+  document.getElementById('eko-chat-toggle').addEventListener('click', function () {
+    var frame = document.getElementById('eko-chat-frame');
+    frame.style.display = (frame.style.display === 'none' || frame.style.display === '') ? 'block' : 'none';
+  });
+</script>
+  </body>
+</html>
