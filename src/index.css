@@ -29,7 +29,7 @@
   html {
     scroll-behavior: smooth;
     /* Force dark mode behavior globally since we want a pure dark SaaS site */
-    color-scheme: dark; 
+    color-scheme: light dark;
   }
 
   body {
@@ -63,4 +63,37 @@
 /* Global focus styles */
 :focus-visible {
   @apply outline-none ring-2 ring-glow-orange/50 ring-offset-2 ring-offset-background;
+}
+/* ===== Global Light/Dark Auto-Inversion ===== */
+/* When NOT in dark mode, flip the common hardcoded dark-theme colors */
+:root:not(.dark) {
+  --color-background: #ffffff;
+  --color-foreground: #14151a;
+  --color-card: rgba(0, 0, 0, 0.03);
+  --color-card-border: rgba(0, 0, 0, 0.08);
+  --color-muted: rgba(0, 0, 0, 0.06);
+  --color-muted-foreground: rgba(0, 0, 0, 0.6);
+  --color-border: rgba(0, 0, 0, 0.1);
+}
+
+:root:not(.dark) body {
+  color-scheme: light;
+}
+
+/* Catch hardcoded utility classes components use directly */
+:root:not(.dark) .text-white {
+  color: #14151a !important;
+}
+:root:not(.dark) .bg-black,
+:root:not(.dark) [class*="bg-black/"] {
+  background-color: #ffffff !important;
+}
+:root:not(.dark) [class*="border-white/"] {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+:root:not(.dark) [class*="bg-white/"] {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+:root:not(.dark) .mix-blend-luminosity {
+  mix-blend-mode: normal !important;
 }
